@@ -6,7 +6,7 @@
 #' @param uid User id
 #' @param password Password
 #' @keywords Connect
-#' @export dnhandle Database Handle
+#' @export
 #' @examples
 #' dbHandle <- connect_db("server.com","db_test","admin","password")
 
