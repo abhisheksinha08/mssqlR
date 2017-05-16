@@ -12,9 +12,11 @@
 
 connect_db <- function(server, db, uid, pwd){
   dbhandle <- tryCatch({
-    odbcDriverConnect(paste('driver={SQL Server Native Client 11.0};server=', server, ';database=',db,';uid=',uid,';pwd=',pwd))
+    odbcDriverConnect(paste('driver={SQL Server Native Client 11.0};server=', server, ';database=',db, ';uid=', uid, ';pwd=',pwd, sep = ""))
   },
-    error("Error")
+  error = function(e){
+    print(paste("Error!", e))
+  }
   )
   return(dbhandle)
 }
