@@ -68,5 +68,5 @@ connect_entity_gen <- function(server, db, uid, pwd){
   
   
   
-  return(dbhandle)
+  return(dbDetails)
 }
