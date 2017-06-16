@@ -2,15 +2,17 @@
 % Please edit documentation in R/from.R
 \name{from}
 \alias{from}
-\title{Generates from part fo the query}
+\title{Generates from part for the query}
 \usage{
-from(data)
+from(query, data)
 }
 \arguments{
+\item{query}{Existing query}
+
 \item{data}{Table or View to query from}
 }
 \description{
-This function creates a from part fo the query
+This function creates a from part for the query
 }
 \examples{
 from_tb <- from(dbHandle$tabl_dbo.table)
