@@ -2,3 +2,4 @@
 
 export(connect_db)
 export(connect_entity_gen)
+export(from)
