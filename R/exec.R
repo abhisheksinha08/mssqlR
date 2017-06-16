@@ -14,7 +14,7 @@ exec <- function(query, dbHandle){
     {
       query <- paste("select *", query, sep = " ")
     }
-    sqlQuery(dbhandle, query)
+    sqlQuery(dbHandle, query)
   },
   error = function(e){
     cat(paste("Error!\n", e))
