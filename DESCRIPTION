@@ -1,6 +1,6 @@
 Package: mssqlR
 Title: MSSQL Querying using R
-Version: 0.0.0.9000
+Version: 0.0.0.9100
 Authors@R: person("Abhishek", "Sinha", email = "abhishek.sinha@opasha.org", role = c("aut", "cre"))
 Description: Use mssqlR to query data from MS SqlServer. Based on the concept on Entity Framework, the package allows querying data from MS SqlServer Database
 Depends: R (>= 3.4.0), RODBC, magrittr
