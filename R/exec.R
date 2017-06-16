@@ -10,9 +10,9 @@
 
 exec <- function(query, dbHandle){
   df <- tryCatch({
-    if(grepl("Select", query) == FALSE ||grepl("select", query) == FALSE)
+    if(grepl("Select", query) == FALSE && grepl("select", query) == FALSE)
     {
-      query <- paste("Select *", query, sep = " ")
+      query <- paste("Select *", query, sep = " ") #Add Select * if Select part is missing
     }
     sqlQuery(dbHandle, query)
   },
