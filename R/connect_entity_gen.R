@@ -45,8 +45,6 @@ connect_entity_gen <- function(server, db, uid, pwd){
   tables_sys<-data.frame(tables_sys, stringsAsFactors = FALSE)
   tables_sys$Var.1 <- levels(tables_sys$Var.1)
 
-  dbDetails<-list(dbhandle = dbhandle)
-
   i<-1
   for(i in 1:nrow(tables_sys)){
     dbDetails[[paste("view",tables_sys[i,1], sep = "_")]] <-  tables_sys[i,1]
@@ -77,7 +75,6 @@ connect_entity_gen <- function(server, db, uid, pwd){
     i<-i+1
   }
   rm( list = c("tables_sys","cols","i","j","schema_name","table_name","tableName"))
-  cat("Done\n")
 
   #Get View Field Names
 
@@ -101,6 +98,8 @@ connect_entity_gen <- function(server, db, uid, pwd){
     i<-i+1
   }
   rm( list = c("view_sys","cols","i","j","schema_name","view_name","viewName"))
+
+  cat("Done\n")
 
   return(dbDetails)
 }

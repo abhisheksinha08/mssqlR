@@ -2,7 +2,7 @@
 % Please edit documentation in R/from.R
 \name{from}
 \alias{from}
-\title{Connect to Database Server and Generate Entity Details Function}
+\title{Generates from part fo the query}
 \usage{
 from(data)
 }
@@ -10,7 +10,7 @@ from(data)
 \item{data}{Table or View to query from}
 }
 \description{
-This function connects to database and creates entity details
+This function creates a from part fo the query
 }
 \examples{
 from_tb <- from(dbHandle$tabl_dbo.table)

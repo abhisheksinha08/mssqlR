@@ -1,6 +1,6 @@
-#' Connect to Database Server and Generate Entity Details Function
+#' Generates from part fo the query
 #'
-#' This function connects to database and creates entity details
+#' This function creates a from part fo the query
 #' @param data Table or View to query from
 #' @keywords from
 #' @export
