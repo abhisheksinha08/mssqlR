@@ -4,7 +4,7 @@
 \alias{select}
 \title{Generates Select part fo the query}
 \usage{
-select(query = NULL, ..., top = NULL)
+select(query = NULL, ..., top = NULL, distinct = NULL)
 }
 \arguments{
 \item{query}{Existing query}
@@ -12,6 +12,8 @@ select(query = NULL, ..., top = NULL)
 \item{...}{Fields to query}
 
 \item{top}{Top n rows of the data}
+
+\item{distinct}{True or FALSE}
 }
 \description{
 This function creates "Select" part fo the query

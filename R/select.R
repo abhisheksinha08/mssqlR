@@ -4,12 +4,13 @@
 #' @param query Existing query
 #' @param ... Fields to query
 #' @param top Top n rows of the data
+#' @param distinct True or FALSE
 #' @keywords from
 #' @export
 #' @examples
 #' from_tb <- select(from("Table1"),"COl1","COl2",Col3", top=100)
 
-select <- function(query=NULL, ..., top=NULL){
+select <- function(query=NULL, ..., top=NULL, distinct=NULL){
 
   top_provided<-TRUE
   if(is.null(top))
@@ -43,12 +44,22 @@ select <- function(query=NULL, ..., top=NULL){
     query ="";
   }
 
+
+
   # no columns name are provided
   if(length(c(...))==0)
   {
     if(top_provided==TRUE)
     {
+      if(distinct==TRUE)
+      {
+        return(paste("Select DISTINCT TOP", top , "*",query,sep = " "))
+      }
       return(paste("Select TOP", top , "*",query,sep = " "))
+    }
+    if(distinct==TRUE)
+    {
+      return(paste("Select DISTINCT *",query,sep = " "))
     }
     return(paste("Select *",query,sep = " "))
   }
@@ -56,7 +67,15 @@ select <- function(query=NULL, ..., top=NULL){
   # when columns name are provided
   if(top_provided==TRUE)
   {
+    if(distinct==TRUE)
+    {
+      return(trim(paste("Select DISITNCT TOP", top, paste(...,sep = ","), query, sep = " ")))
+    }
     return(trim(paste("Select TOP", top, paste(...,sep = ","), query, sep = " ")))
+  }
+  if(distinct==TRUE)
+  {
+    return(trim(paste("Select DISTINCT",paste(...,sep = ","), query, sep = " ")))
   }
   return(trim(paste("Select",paste(...,sep = ","), query, sep = " ")))
 
