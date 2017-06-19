@@ -69,7 +69,7 @@ select <- function(query=NULL, ..., top=NULL, distinct=NULL){
   {
     if(distinct==TRUE)
     {
-      return(trim(paste("Select DISITNCT TOP", top, paste(...,sep = ","), query, sep = " ")))
+      return(trim(paste("Select DISTINCT TOP", top, paste(...,sep = ","), query, sep = " ")))
     }
     return(trim(paste("Select TOP", top, paste(...,sep = ","), query, sep = " ")))
   }
