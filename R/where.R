@@ -25,13 +25,19 @@ where <- function(query=NULL,  ...){
 
   for(i in seq(1,length(c1),3))
   {
+    where_clause_right_side <- c1[i+2];
+    if(is.na(as.numeric(c1[i+2])))
+    {
+      where_clause_right_side <- paste(",", c1[i+2], ",", sep = "");
+    }
+
     if(i==1)
     {
-      where_clause <- paste("where", c1[i], c1[i+1],c1[i+2], sep = " ");
+      where_clause <- paste("where", c1[i], c1[i+1],where_clause_right_side, sep = " ");
     }
     else
     {
-      where_clause <- paste(where_clause, paste(c1[i], c1[i+1],c1[i+2], sep = " "), sep=",");
+      where_clause <- paste(where_clause, paste(c1[i], c1[i+1],where_clause_right_side, sep = " "), sep=",");
     }
   }
 
