@@ -23,11 +23,11 @@ where <- function(query=NULL,  ...){
 
   where_clause <- "";
 
-  for(i in seq(1:length(c1),3))
+  for(i in seq(1,length(c1),3))
   {
     if(i==1)
     {
-      where_clause <- paste("from", c1(i), c1(i+1),c1(i+2), sep = " ");
+      where_clause <- paste("where", c1(i), c1(i+1),c1(i+2), sep = " ");
     }
     else
     {
