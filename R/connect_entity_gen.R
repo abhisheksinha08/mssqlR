@@ -35,7 +35,7 @@ connect_entity_gen <- function(server, db, uid, pwd){
 
   i<-1
   for(i in 1:nrow(tables_sys)){
-    dbDetails[[paste("tbl",tables_sys[i,1], sep = "_")]] <-  tables_sys[i,1]
+    dbDetails[[paste("tbl",tables_sys[i,1], sep = "_")]] <-  as.character(tables_sys[i,1])
     i<-i+1
   }
   rm( list = c("tables_sys","i"))
@@ -47,7 +47,7 @@ connect_entity_gen <- function(server, db, uid, pwd){
 
   i<-1
   for(i in 1:nrow(tables_sys)){
-    dbDetails[[paste("view",tables_sys[i,1], sep = "_")]] <-  tables_sys[i,1]
+    dbDetails[[paste("view",tables_sys[i,1], sep = "_")]] <-  as.character(tables_sys[i,1])
     i<-i+1
   }
   rm( list = c("tables_sys","i"))
@@ -67,7 +67,7 @@ connect_entity_gen <- function(server, db, uid, pwd){
     cols$Var.1 <- levels(cols$Var.1)
     j<-1
     for(j in 1:nrow(cols)){
-      dbDetails[[paste("col",tableName, cols[j,1], sep = "_")]] <-  cols[j,1]
+      dbDetails[[paste("col",tableName, cols[j,1], sep = "_")]] <-  as.character(cols[j,1])
       j<-j+1
     }
 
@@ -90,7 +90,7 @@ connect_entity_gen <- function(server, db, uid, pwd){
     cols$Var.1 <- levels(cols$Var.1)
     j<-1
     for(j in 1:nrow(cols)){
-      dbDetails[[paste("vcol",viewName, cols[j,1], sep = "_")]] <-  cols[j,1]
+      dbDetails[[paste("vcol",viewName, cols[j,1], sep = "_")]] <-  as.character(cols[j,1])
       j<-j+1
     }
 
