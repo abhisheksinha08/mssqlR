@@ -22,15 +22,20 @@ orderby <- function(query=NULL,  ...){
     return(query);
   }
 
-  for(i in seq(0,length(c1),2))
+  for(i in seq(1,length(c1),2))
   {
-    if(i==0)
+    orderbydir <- toupper(c[i+1]);
+    if(orderbydir!='ASC' && orderbydir!='DESC')
     {
-      order_by_clause <- paste("ORDER BY", c1[i], c1[i+1], sep = " ");
+      orderbydir <- 'ASC';
+    }
+    if(i==1)
+    {
+      order_by_clause <- paste("ORDER BY", c1[i], orderbydir, sep = " ");
     }
     else
     {
-      order_by_clause <- paste(order_by_clause, paste(c1[i], c1[i], sep = " "), sep=",");
+      order_by_clause <- paste(order_by_clause, paste(c1[i], orderbydir, sep = " "), sep=",");
     }
   }
 
