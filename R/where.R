@@ -8,7 +8,7 @@
 #' @examples
 #' from_tb <- where("", dbHandle$col_tabl_dbo.col1, "=", "test1",dbHandle$col_tabl_dbo.col1, >, val1)
 
-from <- function(query=NULL,  ...){
+where <- function(query=NULL,  ...){
   if(is.null(query))
   {
     query ="";
