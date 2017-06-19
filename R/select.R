@@ -44,6 +44,10 @@ select <- function(query=NULL, ..., top=NULL, distinct=NULL){
     query ="";
   }
 
+  if(is.null(distinct))
+  {
+    distinct = FALSE;
+  }
 
 
   # no columns name are provided
