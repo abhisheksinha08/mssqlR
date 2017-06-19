@@ -6,7 +6,7 @@
 #' @keywords where
 #' @export
 #' @examples
-#' from_tb <- where("", dbHandle$col_tabl_dbo.col1, "=", "test1",dbHandle$col_tabl_dbo.col1, >, val1)
+#' where_cond <- where("", dbHandle$col_tabl_dbo.col1, "=", "test1",dbHandle$col_tabl_dbo.col1, >, val1)
 
 where <- function(query=NULL,  ...){
 
