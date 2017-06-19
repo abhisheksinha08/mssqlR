@@ -24,7 +24,7 @@ orderby <- function(query=NULL,  ...){
 
   for(i in seq(1,length(c1),2))
   {
-    orderbydir <- toupper(c[i+1]);
+    orderbydir <- toupper(c1[i+1]);
     if(orderbydir!='ASC' && orderbydir!='DESC')
     {
       orderbydir <- 'ASC';
