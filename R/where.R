@@ -9,6 +9,7 @@
 #' from_tb <- where("", dbHandle$col_tabl_dbo.col1, "=", "test1",dbHandle$col_tabl_dbo.col1, >, val1)
 
 where <- function(query=NULL,  ...){
+
   if(is.null(query))
   {
     query ="";
@@ -16,28 +17,37 @@ where <- function(query=NULL,  ...){
 
   c1 <- c(...);
 
-  if(length(c1)==0 || length(c1)%%3>0)
+  if(length(c1)==0 || (length(c1) +1) %%4>0)
   {
     return(query);
   }
 
   where_clause <- "";
 
-  for(i in seq(1,length(c1),3))
+  for(i in seq(0,length(c1),4))
   {
-    where_clause_right_side <- c1[i+2];
-    if(is.na(as.numeric(c1[i+2])))
+    where_clause_right_side <- c1[i+3];
+    if(suppressWarnings(is.na(as.numeric(c1[i+3]))))
     {
-      where_clause_right_side <- paste(",", c1[i+2], ",", sep = "");
+      where_clause_right_side <- paste("'", c1[i+3], "'", sep = "");
     }
 
-    if(i==1)
+    if(i==0)
     {
-      where_clause <- paste("where", c1[i], c1[i+1],where_clause_right_side, sep = " ");
+      where_clause <- paste("where", c1[i+1], c1[i+2],where_clause_right_side, sep = " ");
     }
     else
     {
-      where_clause <- paste(where_clause, paste(c1[i], c1[i+1],where_clause_right_side, sep = " "), sep=",");
+      if(toupper(c1[i])=="AND")
+      {
+        #AND Condition
+        where_clause <- paste(where_clause, paste("AND",c1[i+1], c1[i+2],where_clause_right_side, sep = " "), sep=" ");
+      }
+      else
+      {
+        #OR Condition
+        where_clause <- paste(where_clause, paste("OR",c1[i+1], c1[i+2],where_clause_right_side, sep = " "), sep=" ");
+      }
     }
   }
 
