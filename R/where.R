@@ -27,11 +27,11 @@ where <- function(query=NULL,  ...){
   {
     if(i==1)
     {
-      where_clause <- paste("where", c1(i), c1(i+1),c1(i+2), sep = " ");
+      where_clause <- paste("where", c1[i], c1[i+1],c1[i+2], sep = " ");
     }
     else
     {
-      where_clause <- paste(where_clause, paste(c1(i), c1(i+1),c1(i+2), sep = " "), sep=",");
+      where_clause <- paste(where_clause, paste(c1[i], c1[i+1],c1[i+2], sep = " "), sep=",");
     }
   }
 
