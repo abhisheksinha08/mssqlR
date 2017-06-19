@@ -8,7 +8,12 @@
 #' @examples
 #' from_tb <- from(dbHandle$tabl_dbo.table)
 
-from <- function(query, data){
+from <- function(query=NULL, data){
+  if(is.null(query))
+  {
+    query ="";
+  }
+
   if(query=="")
   {
     return(paste("from", data, sep = " "))

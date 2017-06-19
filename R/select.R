@@ -9,7 +9,7 @@
 #' @examples
 #' from_tb <- select(from("Table1"),"COl1","COl2",Col3", top=100)
 
-select <- function(query, ..., top=NULL){
+select <- function(query=NULL, ..., top=NULL){
 
   top_provided<-TRUE
   if(is.null(top))
@@ -36,6 +36,11 @@ select <- function(query, ..., top=NULL){
         }
       }
     }
+  }
+
+  if(is.null(query))
+  {
+    query ="";
   }
 
   # no columns name are provided

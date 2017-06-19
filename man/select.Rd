@@ -4,7 +4,7 @@
 \alias{select}
 \title{Generates Select part fo the query}
 \usage{
-select(query, ..., top = NULL)
+select(query = NULL, ..., top = NULL)
 }
 \arguments{
 \item{query}{Existing query}
