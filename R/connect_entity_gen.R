@@ -13,7 +13,7 @@
 connect_entity_gen <- function(server, db, uid, pwd){
 
   #Connect to SQL Server
-  cat("mssqlR v 0.0.0.9102: Connecting to Database...")
+  cat("mssqlR v 0.0.0.9103: Connecting to Database...")
   dbhandle <- tryCatch({
     odbcDriverConnect(paste('driver={SQL Server Native Client 11.0};server=', server, ';database=',db, ';uid=', uid, ';pwd=',pwd, sep = ""))
   },
