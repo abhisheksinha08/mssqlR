@@ -6,7 +6,7 @@
 #' @keywords from
 #' @export
 #' @examples
-#' from_tb <- from(dbHandle$tabl_dbo.table)
+#' from_tb <- from("","tableName")
 
 from <- function(query=NULL, data){
   if(is.null(query))

@@ -1,11 +1,12 @@
 Package: mssqlR
 Title: MSSQL Querying using R
-Version: 0.0.0.9100
-Authors@R: person("Abhishek", "Sinha", email = "abhishek.sinha@opasha.org", role = c("aut", "cre"))
-Description: Use mssqlR to query data from MS SqlServer. Based on the concept on Entity Framework, the package allows querying data from MS SqlServer Database
-Depends: R (>= 3.4.0), RODBC, magrittr
-License: What license is it under?
+Version: 1.0.0.9200
+Authors@R: person("Abhishek", "Sinha", email = "abhishek.sparta@gmail.com", role = c("aut", "cre"))
+Description: Use mssqlR to query data from MS SqlServer. Based on the concepts of Entity Framework, the package allows querying data from MS SqlServer Database.
+Depends: R (>= 3.4.0)
+License: GPL (>=3) | file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: RODBC, magrittr
 RoxygenNote: 6.0.1.9000
+Maintainer: Abhishek Sinha <abhishek.sparta@gmail.com>

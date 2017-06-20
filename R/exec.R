@@ -6,7 +6,7 @@
 #' @keywords exec
 #' @export
 #' @examples
-#' df <- from(dbHandle$tabl_dbo.table) %>% exec(dbHandle)
+#' df <- exec("",NULL)
 
 exec <- function(query, dbHandle){
   df <- tryCatch({

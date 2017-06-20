@@ -6,7 +6,7 @@
 #' @keywords order by
 #' @export
 #' @examples
-#' order_by_cols <- orderby("", dbHandle$col_tabl_dbo.col1, "ASC",dbHandle$col_tabl_dbo.col1, "DESC")
+#' order_by_cols <- orderby("", "col1", "ASC","col2", "DESC")
 
 orderby <- function(query=NULL,  ...){
 

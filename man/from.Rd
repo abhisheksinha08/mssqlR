@@ -15,6 +15,6 @@ from(query = NULL, data)
 This function creates a from part for the query
 }
 \examples{
-from_tb <- from(dbHandle$tabl_dbo.table)
+from_tb <- from("","tableName")
 }
 \keyword{from}

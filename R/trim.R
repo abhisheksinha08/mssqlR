@@ -5,6 +5,6 @@
 #' @keywords trim leading trailing whitespaces
 #' @export
 #' @examples
-#' df <- trim(" String with leading and trailing whitespaces. ")
-#' String with leading and trailing whitespaces.
+#' df <- trim(" text containing leading and trailing whitespaces. ")
+#' #text containing leading and trailing whitespaces.
 trim <- function (x) gsub("^\\s+|\\s+$", "", x)

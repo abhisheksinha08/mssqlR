@@ -15,7 +15,7 @@ orderby(query = NULL, ...)
 This function generates "order by" part of a query
 }
 \examples{
-order_by_cols <- orderby("", dbHandle$col_tabl_dbo.col1, "ASC",dbHandle$col_tabl_dbo.col1, "DESC")
+order_by_cols <- orderby("", "col1", "ASC","col2", "DESC")
 }
 \keyword{by}
 \keyword{order}

@@ -15,6 +15,6 @@ exec(query, dbHandle)
 This function executes the query
 }
 \examples{
-df <- from(dbHandle$tabl_dbo.table) \%>\% exec(dbHandle)
+df <- exec("",NULL)
 }
 \keyword{exec}

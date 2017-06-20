@@ -18,4 +18,12 @@ select(query = NULL, ..., top = NULL, distinct = NULL)
 \description{
 This function creates "Select" part fo the query
 }
+\examples{
+
+#Returns Top 100 rows
+from_tb <- select("","COl1","COl2","Col3", top=100)
+
+#Returns distinct rows
+from_tb <- select("","COl1","COl2","Col3", distinct=TRUE)
+}
 \keyword{from}

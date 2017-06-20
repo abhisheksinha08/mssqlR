@@ -4,8 +4,9 @@
 #' @param server Database Server Url/IP Address
 #' @param db Database Name
 #' @param uid User id
-#' @param password Password
+#' @param pwd Password
 #' @keywords Connect
+#' @import RODBC magrittr
 #' @export
 #' @examples
 #' dbHandle <- connect_db("server.com","db_test","admin","password")

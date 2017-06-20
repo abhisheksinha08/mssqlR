@@ -8,7 +8,12 @@
 #' @keywords from
 #' @export
 #' @examples
-#' from_tb <- select(from("Table1"),"COl1","COl2",Col3", top=100)
+#'
+#' #Returns Top 100 rows
+#' from_tb <- select("","COl1","COl2","Col3", top=100)
+#'
+#' #Returns distinct rows
+#' from_tb <- select("","COl1","COl2","Col3", distinct=TRUE)
 
 select <- function(query=NULL, ..., top=NULL, distinct=NULL){
 

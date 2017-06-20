@@ -13,7 +13,7 @@ connect_entity_gen(server, db, uid, pwd)
 
 \item{uid}{User id}
 
-\item{password}{Password}
+\item{pwd}{Password}
 }
 \description{
 This function connects to database and creates entity details

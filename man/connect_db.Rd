@@ -13,7 +13,7 @@ connect_db(server, db, uid, pwd)
 
 \item{uid}{User id}
 
-\item{password}{Password}
+\item{pwd}{Password}
 }
 \description{
 This function allows you to connect to a MS SqlServer Database

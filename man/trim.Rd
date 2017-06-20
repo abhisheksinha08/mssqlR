@@ -13,8 +13,8 @@ trim(x)
 This function trims leading and trailing whitespaces
 }
 \examples{
-df <- trim(" String with leading and trailing whitespaces. ")
-String with leading and trailing whitespaces.
+df <- trim(" text containing leading and trailing whitespaces. ")
+#text containing leading and trailing whitespaces.
 }
 \keyword{leading}
 \keyword{trailing}
