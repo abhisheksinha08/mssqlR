@@ -7,6 +7,7 @@
 #' @param pwd Password
 #' @keywords Connect
 #' @import RODBC magrittr
+#' @importFrom magrittr %>%
 #' @export
 #' @examples
 #' dbHandle <- connect_db("server.com","db_test","admin","password")

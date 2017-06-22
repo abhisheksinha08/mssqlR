@@ -4,6 +4,7 @@
 #' @param query Existing query
 #' @param  ... where list
 #' @keywords where
+#' @importFrom magrittr %>%
 #' @export
 #' @examples
 #' where_cond <- where("", "col1", "=", "test1", "AND", "col2", ">", 25)

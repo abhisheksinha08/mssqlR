@@ -4,6 +4,7 @@
 #' @param query Existing query
 #' @param data Table or View to query from
 #' @keywords from
+#' @importFrom magrittr %>%
 #' @export
 #' @examples
 #' from_tb <- from("","tableName")

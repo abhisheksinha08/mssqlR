@@ -4,6 +4,7 @@
 #' @param query Existing query
 #' @param  ... order by list
 #' @keywords order by
+#' @importFrom magrittr %>%
 #' @export
 #' @examples
 #' order_by_cols <- orderby("", "col1", "ASC","col2", "DESC")

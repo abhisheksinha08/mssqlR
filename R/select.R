@@ -6,6 +6,7 @@
 #' @param top Top n rows of the data
 #' @param distinct True or FALSE
 #' @keywords from
+#' @importFrom magrittr %>%
 #' @export
 #' @examples
 #'

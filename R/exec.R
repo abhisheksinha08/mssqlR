@@ -4,6 +4,7 @@
 #' @param query full query for execution
 #' @param dbHandle Database Handle to use for query
 #' @keywords exec
+#' @importFrom magrittr %>%
 #' @export
 #' @examples
 #' df <- exec("",NULL)

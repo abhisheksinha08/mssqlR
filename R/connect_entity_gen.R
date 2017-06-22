@@ -7,6 +7,7 @@
 #' @param pwd Password
 #' @keywords Connect Entity Generation
 #' @import RODBC magrittr
+#' @importFrom magrittr %>%
 #' @export
 #' @examples
 #' dbHandle <- connect_entity_gen("server.com","db_test","admin","password")
@@ -14,7 +15,7 @@
 connect_entity_gen <- function(server, db, uid, pwd){
 
   #Connect to SQL Server
-  cat("mssqlR v 0.0.0.9103: Connecting to Database...")
+  cat("mssqlR: Connecting to Database...")
   dbhandle <- tryCatch({
     odbcDriverConnect(paste('driver={SQL Server Native Client 11.0};server=', server, ';database=',db, ';uid=', uid, ';pwd=',pwd, sep = ""))
   },
@@ -25,8 +26,10 @@ connect_entity_gen <- function(server, db, uid, pwd){
   )
 
   if(dbhandle==-1)
+  {
+    cat("ERROR!")
     return(NULL)
-
+  }
   cat("Connected!\n")
   cat("Generating Entities...")
   #Get Table Names
