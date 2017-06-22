@@ -13,8 +13,6 @@
 #' dbHandle <- connect_entity_gen("server.com","db_test","admin","password")
 
 connect_entity_gen <- function(server, db, uid, pwd){
-  library(magrittr)
-
   #Connect to SQL Server
   cat("mssqlR: Connecting to Database...")
   dbhandle <- tryCatch({
